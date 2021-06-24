@@ -1,6 +1,11 @@
-const delay = (ms) => {
-  // Твой код
+const delay = ms => {
+  return new Promise(resolve => {
+    setInterval(() => {
+      resolve(ms);
+    }, ms);
+  });
 };
+
 
 const logger = (time) => console.log(`Resolved after ${time}ms`);
 
